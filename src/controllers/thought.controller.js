@@ -1,6 +1,6 @@
-import Thought from "../models/Thought.js";
+const Thought = require("../models/Thought.js");
 
-export const CreateThoughtController = async (req, res) => {
+const CreateThoughtController = async (req, res) => {
   const { title, description } = req.body;
   try {
     const thought = Thought.create({ title, description });
@@ -10,3 +10,5 @@ export const CreateThoughtController = async (req, res) => {
     res.send({ message: error.message });
   }
 };
+
+module.exports = { CreateThoughtController }

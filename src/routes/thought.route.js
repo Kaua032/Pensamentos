@@ -1,8 +1,8 @@
-import { Router } from 'express';
-import { CreateThoughtController } from '../controllers/thought.controller.js';
+const { Router } = require('express');
+const { CreateThoughtController } = require('../controllers/thought.controller.js');
 const thoughtRouter = Router();
 
 thoughtRouter.post('/create', CreateThoughtController);
 
 
-export default thoughtRouter;
+module.exports = thoughtRouter;

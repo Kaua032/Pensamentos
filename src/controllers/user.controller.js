@@ -1,3 +1,5 @@
-export const CreateUserController = async (req, res) => {
+const CreateUserController = async (req, res) => {
     
 };
+
+module.exports = { CreateUserController }
