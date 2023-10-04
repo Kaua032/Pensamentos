@@ -8,7 +8,7 @@ const authMiddleware = require("../middlewares/auth.midlewares.js");
 const userRouter = Router();
 
 userRouter.post("/create", CreateUserController);
-userRouter.get("/login", LoginController);
+userRouter.post("/login", LoginController);
 userRouter.patch("/update/:id?", authMiddleware, UpdateUserController);
 
 module.exports = userRouter;
