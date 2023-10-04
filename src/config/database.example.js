@@ -1,8 +1,8 @@
 module.exports = {
     dialect: "mysql",
     host: "localhost",
-    username: "aluno_medio",
-    password: "@lunoSenai23.",
+    username: "",
+    password: "",
     database: "db_pensamentos",
     define: {
         timestamps: true,
