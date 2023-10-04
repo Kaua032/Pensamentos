@@ -1,0 +1,17 @@
+POST http//localhost:3000/user/create
+content-type: application/json
+
+{
+  "name": "kaua",
+  "email": "kaua@gmail.com",
+  "password": "123456"
+}
+
+#
+
+PATCH  http//localhost:3000/user/update
+content-type: application/json
+
+{
+  "name": "Kauã Xavier"
+}
