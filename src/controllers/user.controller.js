@@ -12,7 +12,6 @@ const CreateUserController = async (req, res) => {
         });
     }
     const user = await User.create({ name, email, password });
-    console.log(user);
 
     res.status(201).send(user);
   } catch (error) {
