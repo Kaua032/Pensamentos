@@ -1,5 +1,11 @@
 const User = require("../models/User.js");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+dotenv.config();
+
+const generateTokenController = (id) =>
+  jwt.sign({ id: id }, process.env.SECRET_JWT, { expiresIn: 86400 });
 
 const CreateUserController = async (req, res) => {
   const { name, email, password } = req.body;
@@ -11,8 +17,9 @@ const CreateUserController = async (req, res) => {
       });
     }
     const user = await User.create({ name, email, password });
+    const token = generateTokenController(user.id);
 
-    res.status(201).send(user);
+    res.status(201).send({ token });
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
@@ -31,7 +38,8 @@ const LoginController = async (req, res) => {
     const user = await User.findOne({ where: { email } });
 
     if (user && bcrypt.compareSync(password, user.password)) {
-      res.status(200).send(user);
+      const token = generateTokenController(user.id);
+      res.status(200).send({ token });
     }
   } catch (error) {
     res.status(500).send({ message: error.message });
