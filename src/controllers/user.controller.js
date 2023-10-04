@@ -2,6 +2,8 @@ const User = require("../models/User.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
+const Cookies = require("js-cookie");
+
 dotenv.config();
 
 const generateTokenController = (id) =>
@@ -18,6 +20,7 @@ const CreateUserController = async (req, res) => {
     }
     const user = await User.create({ name, email, password });
     const token = generateTokenController(user.id);
+    Cookies.set("token", token, { expires: 1 });
 
     res.status(201).send({ token });
   } catch (error) {
@@ -39,6 +42,7 @@ const LoginController = async (req, res) => {
 
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateTokenController(user.id);
+      Cookies.set("token", token, { expires: 1 });
       res.status(200).send({ token });
     }
   } catch (error) {
@@ -48,8 +52,8 @@ const LoginController = async (req, res) => {
 
 const UpdateUserController = async (req, res) => {
   const { name, email, password } = req.body;
-  const { id } = req.params;
-
+  const id = req.userId;
+  
   try {
     if (!name && !email && !password) {
       res.status(400).send({

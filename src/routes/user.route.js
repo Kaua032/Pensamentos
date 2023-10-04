@@ -4,10 +4,11 @@ const {
   UpdateUserController,
   LoginController,
 } = require("../controllers/user.controller.js");
+const authMiddleware = require("../middlewares/auth.midlewares.js");
 const userRouter = Router();
 
 userRouter.post("/create", CreateUserController);
 userRouter.get("/login", LoginController);
-userRouter.patch("/update/:id?", UpdateUserController);
+userRouter.patch("/update/:id?", authMiddleware, UpdateUserController);
 
 module.exports = userRouter;

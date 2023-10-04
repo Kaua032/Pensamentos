@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ###
-PATCH http://localhost:3000/user/update/2
+PATCH http://localhost:3000/user/update
 content-type: application/json
 
 {
