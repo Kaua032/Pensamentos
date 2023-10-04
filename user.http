@@ -7,8 +7,16 @@ content-type: application/json
   "password": "123456"
 }
 
-#
+###
+GET http//localhost:3000/user/update
+content-type: application/json
 
+{
+  "email": "kaua@gmail.com",
+  "password": "123456"
+}
+
+###
 PATCH  http//localhost:3000/user/update
 content-type: application/json
 
