@@ -1,4 +1,5 @@
 const User = require("../models/User.js");
+const bcrypt = require("bcrypt");
 
 const CreateUserController = async (req, res) => {
   const { name, email, password } = req.body;
@@ -27,9 +28,11 @@ const LoginController = async (req, res) => {
       });
     }
 
-    const user = await User.findOne({ email: email, password: password });
+    const user = await User.findOne({ where: { email } });
 
-    res.status(200).send(user);
+    if (user && bcrypt.compareSync(password, user.password)) {
+      res.status(200).send(user);
+    }
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
@@ -43,16 +46,15 @@ const UpdateUserController = async (req, res) => {
     if (!name && !email && !password) {
       res.status(400).send({
         message:
-          "Preencha pelo menos um dos campos para atualizar o seu perfil",
+          "Preencha pelo menos um dos campos para atualizar o seu perfil.",
       });
     }
     const userUpdated = await User.update(
-      { id: id },
-      { name: name, email: email, password: password }
+      { name, email, password },
+      { where: { id } }
     );
-    console.log(userUpdated);
 
-    res.status(201).send(userUpdated);
+    res.status(201).send({ message: "Usuário atualizado com sucesso." });
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
