@@ -5,12 +5,23 @@ class Thought extends Model {
         super.init(
             {
                 title: DataTypes.STRING,
-                description: DataTypes.STRING
+                description: DataTypes.STRING,
+                userId: {
+                    type: DataTypes.INTEGER,
+                    references: {
+                        model: 'User',
+                        key: 'id',
+                    }
+                }
             },
             {
                 sequelize: connection
             }
         )
+    }
+
+    static associate(models) {
+        this.belongsTo(models.User, { foreignKey: 'userId', as: 'user'})
     }
     
 }
