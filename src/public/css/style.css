@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;500&family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1b1b;
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: solid 2px #fff;
+  padding: 10px 30px;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  color: white;
+  gap: 60px;
+
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+header ul a{
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+#entrar {
+  width: 104px;
+  height: 55px;
+  border-left: 6px solid #068fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#entrar h2 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#entrar_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#entrar_form p {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#entrar_form input {
+  width: 468px;
+  height: 44px;
+  border: 2px solid #fff;
+  background-color: #1c1b1b;
+  padding-left: 15px;
+  margin-top: 5px;
+
+  color: #888;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#entrar_form input::placeholder {
+  color: #888;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#entrar_form form {
+  display: flex;
+  flex-direction: column;
+}
+#entrar_form #button_entrar {
+  width: 135px;
+  height: 44px;
+  border: 2px solid #068fff;
+
+  color: #068fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+#entrar_form p a {
+  color: #068fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#senha_p {
+  margin-top: 15px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  height: 65px;
+  border-top: 2px solid #fff;
+}
+footer h2 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

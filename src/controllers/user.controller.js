@@ -43,7 +43,8 @@ const LoginController = async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateTokenController(user.id);
       Cookies.set("token", token, { expires: 1 });
-      res.status(200).send({ token });
+      console.log(user.name)
+      res.render("dashboardPensamentos",  user );
     }
   } catch (error) {
     res.status(500).send({ message: error.message });
@@ -53,7 +54,7 @@ const LoginController = async (req, res) => {
 const UpdateUserController = async (req, res) => {
   const { name, email, password } = req.body;
   const id = req.userId;
-  
+
   try {
     if (!name && !email && !password) {
       res.status(400).send({

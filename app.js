@@ -8,7 +8,7 @@ require("./src/database/index.js");
 const app = express();
 
 app.set('views', path.join(__dirname, 'src/views'));
-app.use(express.static('public'));
+app.use(express.static('src/public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 

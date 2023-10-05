@@ -1,1 +1,31 @@
-<h1>Página de Login</h1>
+<header>
+    <a href="">
+        <img src="/assets/logo.png" alt="">
+    </a>
+
+    <nav>
+        <ul>
+            <a><li>Pensamentos</li></a>
+            <a><li>Entrar</li></a>
+            <a><li>Registrar</li></a>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="entrar_form">
+        <div id="entrar">
+            <h2>Entrar</h2>
+        </div>
+        <form action="/user/login" method="post">
+            <p>E-mail:</p>
+            <input name="email" placeholder="Digite seu e-mail">
+            <p id="senha_p">Senha:</p>
+            <input name="password" placeholder="Digite sua senha">
+            <input id="button_entrar" type="submit" placeholder="Entrar">
+        </form>
+        <p>Não tem conta? <a href="/homePage">Clique aqui!</a></p>
+    </div>
+</main>
+<footer>
+    <h2>Pensadores@2023</h2>
+</footer>
