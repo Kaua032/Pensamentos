@@ -1,4 +1,5 @@
 const User = require("../models/User.js");
+const Thought = require("../models/Thought.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
@@ -43,8 +44,8 @@ const LoginController = async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateTokenController(user.id);
       Cookies.set("token", token, { expires: 1 });
-      console.log(user.name)
-      res.render("dashboardPensamentos",  user );
+      const thought = await Thought.findAll();
+      res.redirect("/home", { thought: thought.toJSON() });
     }
   } catch (error) {
     res.status(500).send({ message: error.message });

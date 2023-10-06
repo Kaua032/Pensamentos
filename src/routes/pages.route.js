@@ -1,7 +1,8 @@
 const { Router } = require("express");
-const { pageLoginController } = require("../controllers/pages.controller");
+const { pageLoginController, pageDashboardController } = require("../controllers/pages.controller");
 const pagesRouter = Router();
 
-pagesRouter.get('/', pageLoginController)
+pagesRouter.get('/home', pageDashboardController)
+pagesRouter.get('/login', pageLoginController)
 
 module.exports = pagesRouter;
