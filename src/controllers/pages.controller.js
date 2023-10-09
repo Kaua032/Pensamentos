@@ -7,11 +7,12 @@ const pageLoginController = (req, res) => {
 
 const pageDashboardController = (req, res) => {
   if (!Cookies.get("token")) {
-    return res.render("home");
+    return res.render("thought");
   } else {
     const thought = Thought.findAll();
-    return res.render("home", { thought });
+    return res.render("thought", { thought });
   }
 };
 
 module.exports = { pageLoginController, pageDashboardController };
+''

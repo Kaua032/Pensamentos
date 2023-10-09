@@ -185,6 +185,55 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+  cursor: pointer;
+}
+#pensamentos div #order{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+#order h2{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#order input{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+
+  background-color: #1c1b1b;
+  width: 150px;
+  border: none;
+}
+#news{
+  background-image: url(../assets/top.png);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  height: 22px;
+}
+#olders{
+  background-image: url(../assets/bottom.png);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  height: 22px;
+}
+#order #clean{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 footer {
   display: flex;
