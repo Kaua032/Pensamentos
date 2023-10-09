@@ -11,6 +11,20 @@
         </ul>
     </nav>
 </header>
+<main id="dashboard_main">
+    <div id="create_thought">
+         <div id="dashboard">
+            <h2>Dashboard</h2>
+        </div>
+        <a href="/create">Criar Pensamento</a>
+    </div>
+    <h3>Seus Pensamentos:</h3>
+    {{#each thought}}
+        {{this}}
+        {{this.title}}
+        {{this.name}}
+    {{/each}}
+</main>
 <footer>
     <h2>Pensadores@2023</h2>
 </footer>

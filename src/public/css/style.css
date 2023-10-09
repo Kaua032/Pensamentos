@@ -36,7 +36,7 @@ header ul {
   font-weight: 700;
   line-height: normal;
 }
-header ul a{
+header ul a {
   cursor: pointer;
   text-decoration: none;
   color: white;
@@ -133,53 +133,53 @@ main {
   margin-top: 15px;
 }
 
-#pensamentos{
+#pensamentos {
   justify-content: flex-start;
   margin-top: 20px;
   width: 611px;
 }
-#title_pensamentos{
-  color: #FFF;
+#title_pensamentos {
+  color: #fff;
   font-family: Inter;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-#title_pensamentos span{
-  color: #068FFF;
+#title_pensamentos span {
+  color: #068fff;
 }
-#pensamentos div{
+#pensamentos div {
   width: 100%;
 }
-#pensamentos div #search{
+#pensamentos div #search {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
-#search input{
+#search input {
   width: 468px;
   height: 44px;
-  background-color:#1c1b1b;
+  background-color: #1c1b1b;
   border: none;
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
 }
-#search input::placeholder{
-  color: #FFF;
+#search input::placeholder {
+  color: #fff;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-#search button{
+#search button {
   width: 135px;
   height: 44px;
-  background-color:#1c1b1b;
+  background-color: #1c1b1b;
   border: none;
-  border: 2px solid #068FFF;
+  border: 2px solid #068fff;
 
-  color: #068FFF;
+  color: #068fff;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -188,21 +188,21 @@ main {
 
   cursor: pointer;
 }
-#pensamentos div #order{
+#pensamentos div #order {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
-#order h2{
-  color: #FFF;
+#order h2 {
+  color: #fff;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-#order input{
-  color: #FFF;
+#order input {
+  color: #fff;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -214,26 +214,89 @@ main {
   width: 150px;
   border: none;
 }
-#news{
+#news {
   background-image: url(../assets/top.png);
   background-repeat: no-repeat;
   padding-left: 25px;
   height: 22px;
 }
-#olders{
+#olders {
   background-image: url(../assets/bottom.png);
   background-repeat: no-repeat;
   padding-left: 25px;
   height: 22px;
 }
-#order #clean{
-  color: #FFF;
+#order #clean {
+  color: #fff;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-decoration-line: underline;
+}
+#dashboard_main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+}
+#create_thought {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#dashboard {
+  border-left: 6px solid #068fff;
+  color: #fff;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  display: flex;
+  align-items: center;
+}
+#dashboard h2 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 5px;
+}
+#create_thought a {
+  border: 2px solid #068fff;
+  width: 206px;
+  height: 44px;
+  background-color: #1c1b1b;
+
+  color: #068fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+#dashboard_main h3 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-top: 20px;
 }
 footer {
   display: flex;

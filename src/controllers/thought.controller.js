@@ -12,7 +12,6 @@ const CreateThoughtController = async (req, res) => {
     }
 
     const thought = await Thought.create({ title, description, user_id: userId });
-    res.status(201).send(thought);
   } catch (error) {
     res.send({ message: error.message });
   }

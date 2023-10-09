@@ -20,17 +20,22 @@ const pageHomeController = async (req, res) => {
     include: [
       {
         model: User,
-        as: 'user',
-        attributes: ['id', 'name'], // Substitua 'name' pelo nome do campo do nome do usuário em seu modelo de usuário
+        as: "user",
+        attributes: ["id", "email"], // Substitua 'name' pelo nome do campo do nome do usuário em seu modelo de usuário
       },
     ],
-  })
-  console.log(thought)
+  });
+  console.log(thought);
   res.render("home");
+};
+
+const pageCreateThought = async (req, res) => {
+  res.render("criarPensamento");
 };
 
 module.exports = {
   pageLoginController,
   pageDashboardController,
   pageHomeController,
+  pageCreateThought,
 };
