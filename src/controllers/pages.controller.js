@@ -14,5 +14,9 @@ const pageDashboardController = (req, res) => {
   }
 };
 
-module.exports = { pageLoginController, pageDashboardController };
+const pageHomeController = (req, res) => {
+  res.render("home")
+}
+
+module.exports = { pageLoginController, pageDashboardController, pageHomeController };
 ''
