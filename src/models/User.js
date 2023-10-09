@@ -31,6 +31,9 @@ class User extends Model {
       }
     );
   }
+  static associate(models) {
+    this.hasMany(models.Thought, { foreignKey: 'userId', as: 'thoughts' });
+  }
 }
 
 module.exports = User;

@@ -16,7 +16,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING,
       },
-      userId: {
+      user_id: {
         type: Sequelize.INTEGER,
         references: {
           model: "users", // 'Users' é o nome da tabela que estamos referenciando

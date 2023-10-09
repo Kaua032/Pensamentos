@@ -1,4 +1,5 @@
 const Thought = require("../models/Thought.js");
+const User = require("../models/User.js");
 const Cookies = require("js-cookie");
 
 const pageLoginController = (req, res) => {
@@ -14,9 +15,22 @@ const pageDashboardController = (req, res) => {
   }
 };
 
-const pageHomeController = (req, res) => {
-  res.render("home")
-}
+const pageHomeController = async (req, res) => {
+  const thought = await Thought.findAll({
+    include: [
+      {
+        model: User,
+        as: 'user',
+        attributes: ['id', 'name'], // Substitua 'name' pelo nome do campo do nome do usuário em seu modelo de usuário
+      },
+    ],
+  })
+  console.log(thought)
+  res.render("home");
+};
 
-module.exports = { pageLoginController, pageDashboardController, pageHomeController };
-''
+module.exports = {
+  pageLoginController,
+  pageDashboardController,
+  pageHomeController,
+};

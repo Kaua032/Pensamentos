@@ -7,6 +7,10 @@ const connection = new Sequelize(db);
 
 Thought.init(connection);
 User.init(connection);
+
+User.associate(connection.models);
+Thought.associate(connection.models);
+
 console.log('Database Connected');
 
 module.exports = connection;
