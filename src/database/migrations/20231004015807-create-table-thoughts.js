@@ -19,7 +19,7 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         references: {
-          model: "Users", // 'Users' é o nome da tabela que estamos referenciando
+          model: "users", // 'Users' é o nome da tabela que estamos referenciando
           key: "id",
         },
         onUpdate: "CASCADE",
