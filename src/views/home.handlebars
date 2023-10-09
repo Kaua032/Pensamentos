@@ -12,7 +12,24 @@
     </nav>
 </header>
 <main>
-    <h2>Você está na home</h2>
+    <h2>Conheça alguns de nossos Pensamentos:</h2>
+    <div>
+        <div>
+            <input type="text" placeholder="Está buscando por algo?">
+            <button>Buscar</button>
+        </div>
+        <div>
+            <h2>Ordernar por: </h2>
+            <input type="buton" value="Mais novos">
+            <input type="buton" value="Mais antigos">
+            <input type="button" value="limpar">
+        </div>
+    </div>
+    {{#each thought}}
+        <div>
+            <h3>{{this.title}}</h3>
+        </div>
+    {{/each}}
 </main>
 <footer>
     <h2>Pensadores@2023</h2>
