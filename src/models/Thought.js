@@ -5,7 +5,6 @@ class Thought extends Model {
         super.init(
             {
                 title: DataTypes.STRING,
-                description: DataTypes.STRING,
                 userId: {
                     type: DataTypes.INTEGER,
                     references: {

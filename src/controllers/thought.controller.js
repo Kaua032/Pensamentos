@@ -2,7 +2,7 @@ const Thought = require("../models/Thought.js");
 const Cookies = require("js-cookie");
 
 const CreateThoughtController = async (req, res) => {
-  const { title, description } = req.body;
+  const { title } = req.body;
   const userId = req.userId;
   try {
     if (!title || !description) {
@@ -11,7 +11,9 @@ const CreateThoughtController = async (req, res) => {
       });
     }
 
-    const thought = await Thought.create({ title, description, user_id: userId });
+    const thought = await Thought.create({ title, user_id: userId });
+
+    res.redirect('/');
   } catch (error) {
     res.send({ message: error.message });
   }

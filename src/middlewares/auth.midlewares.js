@@ -7,7 +7,8 @@ dotenv.config();
 
 const authMiddleware = async (req, res, next) => {
   try {
-    if(!Cookies.get("token")){
+    console.log(Cookies.get("token"));
+    if (!Cookies.get("token")) {
       return res.send(401);
     }
     const authorization = `Bearer ${Cookies.get("token")}`;
@@ -32,7 +33,7 @@ const authMiddleware = async (req, res, next) => {
       if (error) {
         return res.status(401).send({ message: "Token invalido!" });
       }
-      const user = await User.findOne({ where: { id: decoded.id}})
+      const user = await User.findOne({ where: { id: decoded.id } });
 
       if (!user || !user.id) {
         return req.status(401).send({ message: "Invalido Token!" });
