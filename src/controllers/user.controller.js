@@ -44,8 +44,7 @@ const LoginController = async (req, res) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateTokenController(user.id);
       Cookies.set("token", token, { expires: 1 });
-      const thought = await Thought.findAll();
-      res.redirect("/");
+      res.send({token})
     }
   } catch (error) {
     res.status(500).send({ message: error.message });
