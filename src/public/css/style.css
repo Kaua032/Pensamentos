@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   background-color: #1c1b1b;
   height: 100vh;
+  align-items: center;
 }
 header {
   display: flex;
@@ -37,6 +38,8 @@ header ul {
 }
 header ul a{
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 main {
@@ -129,6 +132,60 @@ main {
 #senha_p {
   margin-top: 15px;
 }
+
+#pensamentos{
+  justify-content: flex-start;
+  margin-top: 20px;
+  width: 611px;
+}
+#title_pensamentos{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#title_pensamentos span{
+  color: #068FFF;
+}
+#pensamentos div{
+  width: 100%;
+}
+#pensamentos div #search{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#search input{
+  width: 468px;
+  height: 44px;
+  background-color:#1c1b1b;
+  border: none;
+  border-bottom: 2px solid #FFF;
+}
+#search input::placeholder{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#search button{
+  width: 135px;
+  height: 44px;
+  background-color:#1c1b1b;
+  border: none;
+  border: 2px solid #068FFF;
+
+  color: #068FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 footer {
   display: flex;
   align-items: center;
@@ -136,6 +193,7 @@ footer {
   margin-top: auto;
   height: 65px;
   border-top: 2px solid #fff;
+  width: 100%;
 }
 footer h2 {
   color: #fff;
