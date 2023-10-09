@@ -6,12 +6,15 @@
     <nav>
         <ul>
             <a><li>Pensamentos</li></a>
-            <a><li>{{user.email}}</li></a>
+            <a href="/login"><li>Entrar</li></a>
+            <a href="/register"><li>Registrar</li></a>
         </ul>
     </nav>
 </header>
 <main>
-    
+    {{#each thought}}
+        <h2>{{this.name}}</h2>
+    {{/each}}
 </main>
 <footer>
     <h2>Pensadores@2023</h2>
