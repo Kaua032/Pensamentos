@@ -5,7 +5,7 @@ const CreateThoughtController = async (req, res) => {
   const { title } = req.body;
   const userId = req.userId;
   try {
-    if (!title || !description) {
+    if (!title) {
       res.status(400).send({
         message: "Preencha todos os campos para cadastrar o seu perfil.",
       });

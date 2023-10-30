@@ -16,8 +16,7 @@ const pageHomeController = async (req, res) => {
       },
     ],
   });
-  console.log(thought);
-  res.render("home");
+  res.render("home", { thought });
 };
 
 const pageCreateThought = async (req, res) => {

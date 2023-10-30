@@ -20,9 +20,16 @@
     </div>
     <h3>Seus Pensamentos:</h3>
     {{#each thought}}
-        {{this}}
-        {{this.title}}
-        {{this.name}}
+    <div class="pensamento">
+        {{this.dataValues.title}}
+        {{this.dataValues.name}}
+        <form action="" method="" id="editar">
+            <input type="submit" value="Editar">
+        </form>
+        <form action="" method="">
+            <input type="submit" value="Excluir">
+        </form>
+    </div>
     {{/each}}
 </main>
 <footer>

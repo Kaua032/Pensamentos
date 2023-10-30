@@ -298,6 +298,43 @@ main {
 
   margin-top: 20px;
 }
+#dashboard_main .pensamento {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #068fff;
+  height: 55px;
+
+  align-items: center;
+
+  color: #068fff;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  padding-left: 30px;
+}
+#dashboard_main .pensamento #editar {
+  margin-left: auto;
+  margin-right: 15px;
+}
+#dashboard_main .pensamento form input {
+  width: 104px;
+  height: 44px;
+
+  border: 2px solid #068fff;
+  background-color: #1c1b1b;
+
+  color: #068fff;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 #main_create_thought {
   align-self: flex-start;
   align-items: flex-start;
@@ -391,10 +428,6 @@ main {
   line-height: normal;
 
   padding: 0;
-}
-
-#main_register_user #title_page{
-
 }
 
 footer {
