@@ -24,8 +24,13 @@ const pageCreateThought = async (req, res) => {
   res.render("criarPensamento");
 };
 
+const pageRegisterUser = async (req, res) => {
+  res.render("cadastrar");
+};
+
 module.exports = {
   pageLoginController,
   pageHomeController,
   pageCreateThought,
+  pageRegisterUser,
 };
