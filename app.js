@@ -1,6 +1,7 @@
 const express = require("express");
 const router = require("./src/routes/index.js");
 const exphbs = require("express-handlebars").create();
+const Cookies = require("js-cookie");
 const path = require("path");
 
 require("./src/database/index.js");

@@ -18,5 +18,13 @@ const CreateThoughtController = async (req, res) => {
     res.send({ message: error.message });
   }
 };
+const FindAllThoughtController = (req, res) => {
+  if (!Cookies.get("token")) {
+    return res.render("thought");
+  } else {
+    const thought = Thought.findAll();
+    return res.render("thought", { thought });
+  }
+};
 
-module.exports = { CreateThoughtController };
+module.exports = { CreateThoughtController, FindAllThoughtController };

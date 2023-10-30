@@ -6,15 +6,6 @@ const pageLoginController = (req, res) => {
   return res.render("login");
 };
 
-const pageDashboardController = (req, res) => {
-  if (!Cookies.get("token")) {
-    return res.render("thought");
-  } else {
-    const thought = Thought.findAll();
-    return res.render("thought", { thought });
-  }
-};
-
 const pageHomeController = async (req, res) => {
   const thought = await Thought.findAll({
     include: [
@@ -35,7 +26,6 @@ const pageCreateThought = async (req, res) => {
 
 module.exports = {
   pageLoginController,
-  pageDashboardController,
   pageHomeController,
   pageCreateThought,
 };
