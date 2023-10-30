@@ -3,7 +3,7 @@ const { CreateThoughtController, FindAllThoughtController } = require('../contro
 const authMiddleware = require('../middlewares/auth.midlewares.js');
 const thoughtRouter = Router();
 
-thoughtRouter.post('/create', authMiddleware, CreateThoughtController);
+thoughtRouter.post('/create', CreateThoughtController);
 thoughtRouter.get('/pensamentos', FindAllThoughtController);
 
 

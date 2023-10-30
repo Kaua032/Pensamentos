@@ -9,6 +9,6 @@ const userRouter = Router();
 
 userRouter.post("/create", CreateUserController);
 userRouter.post("/login", LoginController);
-userRouter.patch("/update/:id?", authMiddleware, UpdateUserController);
+userRouter.patch("/update/:id?", UpdateUserController);
 
 module.exports = userRouter;

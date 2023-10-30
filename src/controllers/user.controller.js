@@ -22,7 +22,7 @@ const CreateUserController = async (req, res) => {
     const user = await User.create({ name, email, password });
     const token = generateTokenController(user.id);
     Cookies.set("token", token, { expires: 1 });
-    res.status(201).send({ token });
+    res.redirect("/thought/pensamentos");
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
@@ -42,7 +42,7 @@ const LoginController = async (req, res) => {
 
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateTokenController(user.id);
-      Cookies.set("token", token, { expires: 1 })
+      Cookies.set("token", token, { expires: 1 });
       res.render("home");
     }
   } catch (error) {
