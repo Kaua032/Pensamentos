@@ -13,7 +13,7 @@ const CreateThoughtController = async (req, res) => {
 
     const thought = await Thought.create({ title, user_id: userId });
 
-    res.redirect('/');
+    res.redirect("/");
   } catch (error) {
     res.send({ message: error.message });
   }
@@ -27,4 +27,26 @@ const FindAllThoughtController = (req, res) => {
   }
 };
 
-module.exports = { CreateThoughtController, FindAllThoughtController };
+const FindAndRemoveController = async (req, res) => {
+  const { id } = req.params;
+
+  const thought = await Thought.destroy({ where: { id } });
+
+  res.redirect("/");
+};
+
+const FindAndUpdateController = async (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const thought = await Thought.update({ title }, { where: { id } });
+
+  res.redirect("/");
+};
+
+module.exports = {
+  CreateThoughtController,
+  FindAllThoughtController,
+  FindAndRemoveController,
+  FindAndUpdateController,
+};

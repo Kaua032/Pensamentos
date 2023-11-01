@@ -23,10 +23,10 @@
     <div class="pensamento">
         {{this.dataValues.title}}
         {{this.dataValues.name}}
-        <form action="" method="" id="editar">
+        <form action="/edit/{{this.dataValues.id}}" method="GET" id="editar">
             <input type="submit" value="Editar">
         </form>
-        <form action="" method="">
+        <form action="/thought/remove/{{this.dataValues.id}}" method="POST">
             <input type="submit" value="Excluir">
         </form>
     </div>

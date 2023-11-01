@@ -1,0 +1,28 @@
+<header>
+  <a href="/">
+    <img src="/assets/logo.png" alt="" />
+  </a>
+
+  <nav>
+    <ul>
+      <a href="/thought/pensamentos"><li>Pensamentos</li></a>
+      <a href="/login"><li>Entrar</li></a>
+      <a href="/register"><li>Registrar</li></a>
+    </ul>
+  </nav>
+</header>
+{{#each thought}}
+<main id="main_create_thought">
+  <div class="title_page">
+    <h2>Editar Pensamento:</h2>
+  </div>
+  <form action="/thought/update/{{this.dataValues.id}}" method="POST">
+    <p>Título:</p>
+    <input type="text" name="title" id="title_thought" value="{{this.dataValues.title}}" />
+    <input type="submit" id="create_btn" value="Editar Pensamento" />
+  </form>
+</main>
+{{/each}}
+<footer>
+  <h2>Pensadores@2023</h2>
+</footer>

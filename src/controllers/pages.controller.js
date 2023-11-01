@@ -27,9 +27,18 @@ const pageRegisterUser = async (req, res) => {
   res.render("cadastrar");
 };
 
+const pageEditController = async (req, res) => {
+  const { id } = req.params;
+
+  const thought = await Thought.findAll({ where: { id } });
+
+  res.render('editarPensamento', {thought});
+};
+
 module.exports = {
   pageLoginController,
   pageHomeController,
   pageCreateThought,
   pageRegisterUser,
+  pageEditController,
 };
